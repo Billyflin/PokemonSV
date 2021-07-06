@@ -14,7 +14,16 @@ public class Pokemon {
         this.numero = numero;
         this.nivel = nivel;
         hp = 100;
-        this.estado="Saludable";
+        this.estado = "Saludable";
+    }
+    public Pokemon(String datos){
+        String[] atributos= datos.split(";");
+        nombre = atributos[0];
+        tipo=atributos[1];
+        numero = Integer.parseInt(atributos[2]);
+        nivel = Integer.parseInt(atributos[3]);
+        hp = Integer.parseInt(atributos[4]);
+
     }
 
     public String getTipo() {

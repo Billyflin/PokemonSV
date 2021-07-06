@@ -44,6 +44,15 @@ public class PokemonCSV {
     public int generation;
     public boolean is_legendary;
 
+    public PokemonCSV(String datos) {
+        String[] atributos= datos.split(",");
+        name = atributos[28];
+        type1=atributos[36];
+        pokedex_number = Integer.parseInt(atributos[2]);
+        generation = Integer.parseInt(atributos[37]);
+        hp = Integer.parseInt(atributos[26]);
+    }
+
     public PokemonCSV(String[] abilities, double against_bug, double against_dragon, double against_electric, double against_fairy, double against_fight, double against_fire, double against_flying, double against_ghost, double against_grass, double against_ground, double against_ice, double against_normal, double against_poison, double against_psychic, double against_rock, double against_steel, double against_water, int attack, int base_egg_steps, int base_happiness, int base_total, int capture_rate, String classfication, int defense, int experience_growth, double height_m, int hp, String japanese_name, String name, double percentage_male, int pokedex_number, int sp_attack, int sp_defense, int speed, String type1, String type2, double weight_kg, int generation, boolean is_legendary) {
         this.abilities = abilities;
         this.against_bug = against_bug;
@@ -451,6 +460,16 @@ public class PokemonCSV {
                 .append(",", generation)
                 .append(",", is_legendary)
                 .toString();
+    }
+
+    public void mostrarPKM() {
+        System.out.println("---------");
+        System.out.println("Nombre: " + getName());
+        System.out.println("Tipo: " + getType1());
+        System.out.println("Generacion: " + getGeneration());
+        System.out.println("Numero: " + getPokedex_number());
+        System.out.println("Hp: " + getHp());
+        System.out.println("---------");
     }
 }
 
