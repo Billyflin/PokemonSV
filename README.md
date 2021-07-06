@@ -1,2 +1,2 @@
-# PokemonSV
- Pokemones como objetos... si como las mujeres!
+# PokemonJava
+ Si! pokemones como objetos... si como las mujeres!
