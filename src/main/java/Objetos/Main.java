@@ -3,8 +3,8 @@ package Objetos;
 import java.io.FileNotFoundException;
 
 public class Main {
-    public static String Ruta="Objetos";
-    public static String RutaC="Objetos";
+    public static String Ruta="C:\\Users\\Billy\\IdeaProjects\\PokemonSV\\src\\lib";
+    public static String RutaC="C:\\Users\\Billy\\IdeaProjects\\PokemonSV\\src\\lib\\Pokemones.csv";
     public static void main(String[] args) throws FileNotFoundException {
         Pokemon p0= new Pokemon("Fuego","Charizard",6,60);
         Pokemon p1= new Pokemon("Agua","Blastoise",9,50);

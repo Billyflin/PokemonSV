@@ -9,15 +9,11 @@ public class Gestor{
         //ContarCaracteres
         public void contarLetrasArchivo(String ruta){
             Path directorio = Paths.get(ruta);
-            int count = 0;
-            try {
-                String contenido=leerArchivo(directorio.toString());
-                count = contenido.trim().length();
-                System.out.println("El total de caracteres es : "+count);
-                System.out.println("Sin ; es: "+contenido.trim().chars().filter(ch -> ch != ';').count());
-            }catch (Exception e){
-                System.out.println(e);
-            }
+            int count;
+            String contenido=leerArchivo(directorio.toString());
+            count = contenido.trim().length();
+            System.out.println("El total de caracteres es : "+count);
+            System.out.println("Sin ; es: "+contenido.trim().chars().filter(ch -> ch != ';').count());
         }
 
         public void contarLineas(String ruta) throws FileNotFoundException {
@@ -96,14 +92,13 @@ public class Gestor{
 
         public String[] listaArchivos(String ruta) {
             File f = new File(ruta);
-            String[] archivos = f.list();
-            return archivos;
+            return f.list();
         }
 
     public void contarPalabras(String Ruta) {
         int contador = 0;
         try {
-            BufferedReader br = new BufferedReader(new FileReader("Objetos"));
+            BufferedReader br = new BufferedReader(new FileReader(Ruta));
             String linea = br.readLine();
             while (linea != null) {
                 System.out.println(linea);
@@ -112,8 +107,6 @@ public class Gestor{
                 linea = br.readLine();
             }
             br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
