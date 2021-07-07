@@ -3,75 +3,59 @@ package PokemonCSV.Hard;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class PokemonCSV {
-    public String[] abilities;
-    public double against_bug;
-    public double against_dragon;
-    public double against_electric;
-    public double against_fairy;
-    public double against_fight;
-    public double against_fire;
-    public double against_flying;
-    public double against_ghost;
-    public double against_grass;
-    public double against_ground;
-    public double against_ice;
-    public double against_normal;
-    public double against_poison;
-    public double against_psychic;
-    public double against_rock;
-    public double against_steel;
-    public double against_water;
-    public int attack;
-    public int base_egg_steps;
-    public int base_happiness;
-    public int base_total;
-    public int capture_rate;
-    public String classfication;
-    public int defense;
-    public int experience_growth;
-    public double height_m;
-    public int hp;
-    public String japanese_name;
-    public String name;
-    public double percentage_male;
-    public int pokedex_number;
-    public int sp_attack;
-    public int sp_defense;
-    public int speed;
-    public String type1;
-    public String type2;
-    public double weight_kg;
-    public int generation;
-    public boolean is_legendary;
+    private String[] abilities;
+    private Against against;
+    private int attack;
+    private int base_egg_steps;
+    private int base_happiness;
+    private int base_total;
+    private int capture_rate;
+    private String classfication;
+    private int defense;
+    private int experience_growth;
+    private double height_m;
+    private int hp;
+    private String japanese_name;
+    private String name;
+    private double percentage_male;
+    private int pokedex_number;
+    private int sp_attack;
+    private int sp_defense;
+    private int speed;
+    private String type1;
+    private String type2;
+    private double weight_kg;
+    private int generation;
+    private boolean is_legendary;
 
-    public PokemonCSV(String datos) {
-        String[] atributos= datos.split(",");
-        name = atributos[28];
-        type1=atributos[36];
-        pokedex_number = Integer.parseInt(atributos[2]);
-        generation = Integer.parseInt(atributos[37]);
-        hp = Integer.parseInt(atributos[26]);
+    public PokemonCSV(String[] atributos) {
+        this.attack = Integer.parseInt(atributos[20]);
+        this.base_egg_steps = Integer.parseInt(atributos[21]);
+        this.base_happiness = Integer.parseInt(atributos[22]);
+        this.base_total = Integer.parseInt(atributos[23]);
+        this.capture_rate = Integer.parseInt(atributos[24]);
+        this.classfication = atributos[25];
+        this.defense = Integer.parseInt(atributos[26]);
+        this.experience_growth = Integer.parseInt(atributos[27]);
+        this.height_m = Double.parseDouble(atributos[28]);
+        this.hp = Integer.parseInt(atributos[29]);
+        this.japanese_name = atributos[30];
+        this.name = atributos[31];
+        this.percentage_male = Double.parseDouble(atributos[32]);
+        this.pokedex_number = Integer.parseInt(atributos[33]);
+        this.sp_attack = Integer.parseInt(atributos[34]);
+        this.sp_defense = Integer.parseInt(atributos[35]);
+        this.speed = Integer.parseInt(atributos[36]);
+        this.type1 = atributos[37];
+        this.type2 = atributos[38];
+        this.weight_kg = Double.parseDouble(atributos[39]);
+        this.generation = Integer.parseInt(atributos[40]);
+        this.is_legendary = Integer.parseInt(atributos[41]) == 1;
+
     }
 
     public PokemonCSV(String[] abilities, double against_bug, double against_dragon, double against_electric, double against_fairy, double against_fight, double against_fire, double against_flying, double against_ghost, double against_grass, double against_ground, double against_ice, double against_normal, double against_poison, double against_psychic, double against_rock, double against_steel, double against_water, int attack, int base_egg_steps, int base_happiness, int base_total, int capture_rate, String classfication, int defense, int experience_growth, double height_m, int hp, String japanese_name, String name, double percentage_male, int pokedex_number, int sp_attack, int sp_defense, int speed, String type1, String type2, double weight_kg, int generation, boolean is_legendary) {
         this.abilities = abilities;
-        this.against_bug = against_bug;
-        this.against_dragon = against_dragon;
-        this.against_electric = against_electric;
-        this.against_fairy = against_fairy;
-        this.against_fight = against_fight;
-        this.against_fire = against_fire;
-        this.against_flying = against_flying;
-        this.against_ghost = against_ghost;
-        this.against_grass = against_grass;
-        this.against_ground = against_ground;
-        this.against_ice = against_ice;
-        this.against_normal = against_normal;
-        this.against_poison = against_poison;
-        this.against_psychic = against_psychic;
-        this.against_rock = against_rock;
-        this.against_steel = against_steel;
-        this.against_water = against_water;
         this.attack = attack;
         this.base_egg_steps = base_egg_steps;
         this.base_happiness = base_happiness;
@@ -104,141 +88,6 @@ public class PokemonCSV {
         this.abilities = abilities;
     }
 
-    public double getAgainst_bug() {
-        return against_bug;
-    }
-
-    public void setAgainst_bug(double against_bug) {
-        this.against_bug = against_bug;
-    }
-
-    public double getAgainst_dragon() {
-        return against_dragon;
-    }
-
-    public void setAgainst_dragon(double against_dragon) {
-        this.against_dragon = against_dragon;
-    }
-
-    public double getAgainst_electric() {
-        return against_electric;
-    }
-
-    public void setAgainst_electric(double against_electric) {
-        this.against_electric = against_electric;
-    }
-
-    public double getAgainst_fairy() {
-        return against_fairy;
-    }
-
-    public void setAgainst_fairy(double against_fairy) {
-        this.against_fairy = against_fairy;
-    }
-
-    public double getAgainst_fight() {
-        return against_fight;
-    }
-
-    public void setAgainst_fight(double against_fight) {
-        this.against_fight = against_fight;
-    }
-
-    public double getAgainst_fire() {
-        return against_fire;
-    }
-
-    public void setAgainst_fire(double against_fire) {
-        this.against_fire = against_fire;
-    }
-
-    public double getAgainst_flying() {
-        return against_flying;
-    }
-
-    public void setAgainst_flying(double against_flying) {
-        this.against_flying = against_flying;
-    }
-
-    public double getAgainst_ghost() {
-        return against_ghost;
-    }
-
-    public void setAgainst_ghost(double against_ghost) {
-        this.against_ghost = against_ghost;
-    }
-
-    public double getAgainst_grass() {
-        return against_grass;
-    }
-
-    public void setAgainst_grass(double against_grass) {
-        this.against_grass = against_grass;
-    }
-
-    public double getAgainst_ground() {
-        return against_ground;
-    }
-
-    public void setAgainst_ground(double against_ground) {
-        this.against_ground = against_ground;
-    }
-
-    public double getAgainst_ice() {
-        return against_ice;
-    }
-
-    public void setAgainst_ice(double against_ice) {
-        this.against_ice = against_ice;
-    }
-
-    public double getAgainst_normal() {
-        return against_normal;
-    }
-
-    public void setAgainst_normal(double against_normal) {
-        this.against_normal = against_normal;
-    }
-
-    public double getAgainst_poison() {
-        return against_poison;
-    }
-
-    public void setAgainst_poison(double against_poison) {
-        this.against_poison = against_poison;
-    }
-
-    public double getAgainst_psychic() {
-        return against_psychic;
-    }
-
-    public void setAgainst_psychic(double against_psychic) {
-        this.against_psychic = against_psychic;
-    }
-
-    public double getAgainst_rock() {
-        return against_rock;
-    }
-
-    public void setAgainst_rock(double against_rock) {
-        this.against_rock = against_rock;
-    }
-
-    public double getAgainst_steel() {
-        return against_steel;
-    }
-
-    public void setAgainst_steel(double against_steel) {
-        this.against_steel = against_steel;
-    }
-
-    public double getAgainst_water() {
-        return against_water;
-    }
-
-    public void setAgainst_water(double against_water) {
-        this.against_water = against_water;
-    }
 
     public int getAttack() {
         return attack;
@@ -420,23 +269,6 @@ public class PokemonCSV {
     public String toString() {
         return new ToStringBuilder(this)
                 .append(",", abilities)
-                .append(",", against_bug)
-                .append(",", against_dragon)
-                .append(",", against_electric)
-                .append(",", against_fairy)
-                .append(",", against_fight)
-                .append(",", against_fire)
-                .append(",", against_flying)
-                .append(",", against_ghost)
-                .append(",", against_grass)
-                .append(",", against_ground)
-                .append(",", against_ice)
-                .append(",", against_normal)
-                .append(",", against_poison)
-                .append(",", against_psychic)
-                .append(",", against_rock)
-                .append(",", against_steel)
-                .append(",", against_water)
                 .append(",", attack)
                 .append(",", base_egg_steps)
                 .append(",", base_happiness)
