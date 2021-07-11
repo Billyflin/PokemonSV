@@ -80,6 +80,32 @@ public class PokemonCSV {
         this.is_legendary = is_legendary;
     }
 
+    public PokemonCSV(String[] abilities, Against aga, int attack, int base_egg_steps, int base_happiness, int base_total, int capture_rate, String classfication, int defense, int experience_growth, double height_m, int hp, String japanese_name, String name, double percentage_male, int pokedex_number, int sp_attack, int sp_defense, int speed, String type1, String type2, double weight_kg, int generation, boolean is_legendary) {
+        this.abilities = abilities;
+        this.attack = attack;
+        this.base_egg_steps = base_egg_steps;
+        this.base_happiness = base_happiness;
+        this.base_total = base_total;
+        this.capture_rate = capture_rate;
+        this.classfication = classfication;
+        this.defense = defense;
+        this.experience_growth = experience_growth;
+        this.height_m = height_m;
+        this.hp = hp;
+        this.japanese_name = japanese_name;
+        this.name = name;
+        this.percentage_male = percentage_male;
+        this.pokedex_number = pokedex_number;
+        this.sp_attack = sp_attack;
+        this.sp_defense = sp_defense;
+        this.speed = speed;
+        this.type1 = type1;
+        this.type2 = type2;
+        this.weight_kg = weight_kg;
+        this.generation = generation;
+        this.is_legendary = is_legendary;
+    }
+
     public String[] getAbilities() {
         return abilities;
     }
