@@ -8,6 +8,7 @@ import com.opencsv.exceptions.CsvException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,17 +23,20 @@ public class openCSV {
         assert n != null;
         List<String[]> datos = n.readAll();
         ArrayList<PokemonCSV> pokemones = new ArrayList<>();
+
         for (String[] dato : datos) {
-//            int ch = dato.lastIndexOf("]");
 //            String[] abilities = abilidadInicial.substring(1, ch).split(",");
 //            abilidadInicial.substring(ch + 2).split(",", 19);
 //            attrAgainst[attrAgainst.length - 1] = "";
-
-            String attrAgainst=new toString(dato).substring();
-            System.out.println(attrAgainst);
+//            String attrAgainst= Arrays.toString(dato);
+//            attrAgainst = new StringReader(dato);
+//            int ch = attrAgainst.lastIndexOf("]");
+//            System.out.println(attrAgainst);
+//            System.out.println(attrAgainst.substring(ch+1,19));
 //            Against aga = new Against(attrAgainst);
-//
-//            System.out.println(Arrays.toString(new String[]{dato[0]}));
+                    //Declaracion Parametros Pokemon
+            System.out.println(Arrays.toString(Arrays.toString(new String[]{dato[0]}).split(",")));
+            System.out.println(Arrays.toString(new String[]{dato[0]}));
 //            String[] abilities = Arrays.toString(new String[]{dato[0]}).split(",");
 //            int attack = Integer.parseInt(Arrays.toString(new String[]{dato[19]}));
 //            int base_egg_steps = Integer.parseInt(Arrays.toString(new String[]{dato[20]}));
