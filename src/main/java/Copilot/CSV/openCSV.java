@@ -22,29 +22,33 @@ public class openCSV {
         assert n != null;
         List<String[]> datos = n.readAll();
         ArrayList<PokemonCSV> pokemones = new ArrayList<>();
+        try {
 
-        for (String[] dato : datos) {
 
-            double against_bug = Double.parseDouble(Arrays.toString(new String[]{dato[1]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_dark = Double.parseDouble(Arrays.toString(new String[]{dato[2]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_dragon = Double.parseDouble(Arrays.toString(new String[]{dato[3]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_electric = Double.parseDouble(Arrays.toString(new String[]{dato[4]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_fairy = Double.parseDouble(Arrays.toString(new String[]{dato[5]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_fight = Double.parseDouble(Arrays.toString(new String[]{dato[6]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_fire = Double.parseDouble(Arrays.toString(new String[]{dato[7]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_flying = Double.parseDouble(Arrays.toString(new String[]{dato[8]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_ghost = Double.parseDouble(Arrays.toString(new String[]{dato[9]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_grass = Double.parseDouble(Arrays.toString(new String[]{dato[10]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_ground = Double.parseDouble(Arrays.toString(new String[]{dato[11]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_ice = Double.parseDouble(Arrays.toString(new String[]{dato[12]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_normal = Double.parseDouble(Arrays.toString(new String[]{dato[13]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_poison = Double.parseDouble(Arrays.toString(new String[]{dato[14]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_psychic = Double.parseDouble(Arrays.toString(new String[]{dato[15]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_rock = Double.parseDouble(Arrays.toString(new String[]{dato[16]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_steel = Double.parseDouble(Arrays.toString(new String[]{dato[17]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            double against_water = Double.parseDouble(Arrays.toString(new String[]{dato[18]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+            for (String[] dato : datos) {
+
+
+                double against_bug = Double.parseDouble(Arrays.toString(new String[]{dato[1]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_dark = Double.parseDouble(Arrays.toString(new String[]{dato[2]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_dragon = Double.parseDouble(Arrays.toString(new String[]{dato[3]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_electric = Double.parseDouble(Arrays.toString(new String[]{dato[4]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_fairy = Double.parseDouble(Arrays.toString(new String[]{dato[5]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_fight = Double.parseDouble(Arrays.toString(new String[]{dato[6]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_fire = Double.parseDouble(Arrays.toString(new String[]{dato[7]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_flying = Double.parseDouble(Arrays.toString(new String[]{dato[8]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_ghost = Double.parseDouble(Arrays.toString(new String[]{dato[9]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_grass = Double.parseDouble(Arrays.toString(new String[]{dato[10]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_ground = Double.parseDouble(Arrays.toString(new String[]{dato[11]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_ice = Double.parseDouble(Arrays.toString(new String[]{dato[12]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_normal = Double.parseDouble(Arrays.toString(new String[]{dato[13]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_poison = Double.parseDouble(Arrays.toString(new String[]{dato[14]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_psychic = Double.parseDouble(Arrays.toString(new String[]{dato[15]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_rock = Double.parseDouble(Arrays.toString(new String[]{dato[16]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_steel = Double.parseDouble(Arrays.toString(new String[]{dato[17]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                double against_water = Double.parseDouble(Arrays.toString(new String[]{dato[18]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+
 //              Against Se Escribe Bien
-            Against aga = new Against(against_bug,against_dark,against_dragon,against_electric,against_fairy,against_fight,against_fire,against_flying,against_ghost,against_grass,against_ground,against_ice,against_normal,against_poison,against_psychic,against_rock,against_steel,against_water);
+                Against aga = new Against(against_bug, against_dark, against_dragon, against_electric, against_fairy, against_fight, against_fire, against_flying, against_ghost, against_grass, against_ground, against_ice, against_normal, against_poison, against_psychic, against_rock, against_steel, against_water);
 
 //              Declaracion Parametros Pokemon
 //            String[] abilities = Arrays.toString(new String[]{dato[0]}).split(",");
@@ -56,13 +60,12 @@ public class openCSV {
 //            String classfication = Arrays.toString(new String[]{dato[24]});
 //            int defense = Integer.parseInt(Arrays.toString(new String[]{dato[25]}).replaceFirst("\\[", "").replaceFirst("]", ""));
 //            int experience_growth = Integer.parseInt(Arrays.toString(new String[]{dato[26]}).replaceFirst("\\[", "").replaceFirst("]", ""));
-            if(Arrays.toString(new String[]{dato[27]}).equals("")){
-                double height_m= Double.parseDouble("0.0");
-                System.out.println("esta vacio");
-            }else{
-                double height_m = Double.parseDouble(Arrays.toString(new String[]{dato[27]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+                if (Arrays.toString(new String[]{dato[27]}).isEmpty()) {
+                    System.out.println(dato[27]);
+                }
 
-            }
+//                double height_m = Double.parseDouble(Arrays.toString(new String[]{dato[27]}).replaceFirst("\\[", "").replaceFirst("]", ""));
+
 //            System.out.println(Double.parseDouble(Arrays.toString(new String[]{dato[27]}).replaceFirst("\\[", "").replaceFirst("]", "")));
 //            int hp = Integer.parseInt(Arrays.toString(new String[]{dato[28]}).replaceFirst("\\[", "").replaceFirst("]", ""));
 //            String japanese_name = Arrays.toString(new String[]{dato[29]});
@@ -79,8 +82,11 @@ public class openCSV {
 //            boolean is_legendary = Integer.parseInt(Arrays.toString(new String[]{dato[40]}).replaceFirst("\\[", "").replaceFirst("]", "")) == 1;
 //
 //            pokemones.add(new PokemonCSV(abilities, aga, attack, base_egg_steps, base_happiness, base_total, capture_rate, classfication, defense, experience_growth, height_m, hp, japanese_name, name, percentage_male, pokedex_number, sp_attack, sp_defense, speed, type1, type2, weight_kg, generation, is_legendary));
-        }
+            }
+        }catch(NumberFormatException e){
+            System.out.println(e);
 
+        }
 //    for (PokemonCSV p : pokemones) {
 //            System.out.println(p);
 //        }
